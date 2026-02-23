@@ -31,12 +31,15 @@ class Solution {
                 end --;
             }
         }
+
         d = d % arr.length;
+
         if(d < 0){
             d = d + arr.length;
         }else if(d === 0){
             return arr;
         }
+        
         reversed(arr, 0, d - 1);
         reversed(arr, d, arr.length - 1);
         reversed(arr, 0, arr.length - 1);
